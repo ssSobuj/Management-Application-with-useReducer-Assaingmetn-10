@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import "./TaskForm.css";
 import { TaskContext } from "../../taskContext/TaskContext";
 import { createDispatch } from "../../utils/createDispatch";
@@ -46,7 +46,11 @@ export default function TaskForm() {
             onChange={handleChange}
             placeholder="Write a new task"
           />
-          <button className="add-todo">
+          <button
+            disabled={
+              state.inputValue.trim() === ""
+            }
+          className="add-todo">
             {!state.isUpdeting ? "Add Task" : "Update Task"}
           </button>
         </form>
