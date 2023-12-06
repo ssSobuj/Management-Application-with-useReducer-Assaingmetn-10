@@ -156,6 +156,3 @@ footer {
   text-decoration: line-through;
 }
 
-.input-sec button:disabled {
-  opacity: 0.4;
-}
